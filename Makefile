@@ -1,4 +1,4 @@
-CFLAGS = -std=c++11
+CFLAGS = -std=c++0x
 
 c++ %: 
 	$(CXX) c++/$@.cc -o c++/$@ $(CFLAGS)
