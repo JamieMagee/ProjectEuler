@@ -14,8 +14,8 @@ do
   make c++ $x > /dev/null
   t="$(date +%s%N)"
   output=$(./c++/$x)
-  t="$(($(date +%s%N)-T))"
-  m="$((T/1000000))"
+  t="$(($(date +%s%N)-t))"
+  m="$((t/1000000))"
   answer=$(eval "sed -n '"$x"p' assets/answers.txt")
   if [ $output == $answer ]
   then 
@@ -31,8 +31,8 @@ for x in matlab/*.m
 do
   t="$(date +%s%N)"
   output=$(octave -qf --no-window-system $x)
-  t="$(($(date +%s%N)-T))"
-  m="$((T/1000000))"
+  t="$(($(date +%s%N)-t))"
+  m="$((t/1000000))"
   x=$(echo $x|cut -c 8- |rev| cut -c 3- |rev)
   answer="ans =  $(eval "sed -n '"$x"p' assets/answers.txt")"
   if [ "$output" == "$answer" ]

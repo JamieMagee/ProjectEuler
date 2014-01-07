@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
   int ans = 0, m[100][100];
-  ifstream file("../assets/067.txt");
+  ifstream file("assets/067.txt");
   
   for(int i = 0; i < 100; ++i)
   {
