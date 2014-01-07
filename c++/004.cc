@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool palindrome(int a)
+bool palindrome(long long int a)
 {
   string c = to_string(a), b = c;
   reverse(c.begin(), c.end());
@@ -25,9 +25,9 @@ int main()
     else
     {
       j = 990;
-      k == 11;
+      k = 11;
     }
-    for (j; j >= i; j-k)
+    for (j; j >= i; j-=k)
     {
       if (i*j <= largest) break;
       if (palindrome(i*j)) largest = i*j;
