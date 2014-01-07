@@ -19,9 +19,9 @@ do
   answer=$(eval "sed -n '"$x"p' assets/answers.txt")
   if [ $output == $answer ]
   then 
-    echo -e "${green}Test $x passed in $m milliseconds ${endColour}"
+    echo -e "${green}Problem $x solved in $m milliseconds ${endColour}"
   else 
-    echo -e "${red}Test $x failed ${endColour}"
+    echo -e "${red}Problem $x failed ${endColour}"
   fi
 done
 
@@ -37,8 +37,8 @@ do
   answer="ans =  $(eval "sed -n '"$x"p' assets/answers.txt")"
   if [ "$output" == "$answer" ]
   then 
-    echo -e "${green}Test $x passed in $m milliseconds ${endColour}"
+    echo -e "${green}Problem $x solved in $m milliseconds ${endColour}"
   else 
-    echo -e "${red}Test $x failed ${endColour}"
+    echo -e "${red}Problem $x failed ${endColour}"
   fi
 done
