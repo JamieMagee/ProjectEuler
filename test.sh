@@ -12,13 +12,16 @@ for x in c++/*.cc
 do 
   x=$(echo $x|cut -c 5- |rev| cut -c 4- |rev)
   make c++ $x > /dev/null
+  t="$(date +%s%N)"
   output=$(./c++/$x)
+  t="$(($(date +%s%N)-T))"
+  m="$((T/1000000))"
   answer=$(eval "sed -n '"$x"p' assets/answers.txt")
   if [ $output == $answer ]
   then 
-    echo -e "${green}Test $x passed${endColour}"
+    echo -e "${green}Test $x passed in $m milliseconds ${endColour}"
   else 
-    echo -e "${red}Test $x failed${endColour}"
+    echo -e "${red}Test $x failed ${endColour}"
   fi
 done
 
@@ -26,13 +29,16 @@ done
 echo "MATLAB Tests"
 for x in matlab/*.m
 do
+  t="$(date +%s%N)"
   output=$(octave -qf --no-window-system $x)
+  t="$(($(date +%s%N)-T))"
+  m="$((T/1000000))"
   x=$(echo $x|cut -c 8- |rev| cut -c 3- |rev)
   answer="ans =  $(eval "sed -n '"$x"p' assets/answers.txt")"
   if [ "$output" == "$answer" ]
   then 
-    echo -e "${green}Test $x passed${endColour}"
+    echo -e "${green}Test $x passed in $m milliseconds ${endColour}"
   else 
-    echo -e "${red}Test $x failed${endColour}"
+    echo -e "${red}Test $x failed ${endColour}"
   fi
 done
