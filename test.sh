@@ -4,14 +4,14 @@ endColour='\e[0m'
 
 yes | sudo apt-add-repository ppa:octave/stable > /dev/null
 sudo apt-get -qq update
-sudo apt-get -qq install octave > /dev/null
+sudo apt-get -qq install octave mono-vbnc > /dev/null
 
 #C++
 echo "C++ Tests"
 for x in c++/*.cc
 do 
   x=$(echo $x|cut -c 5- |rev| cut -c 4- |rev)
-  make c++ $x > /dev/null
+  $CXX c++/$x.cc -o c++/$x -std=c++0x -O3 > /dev/null
   t="$(date +%s%N)"
   output=$(./c++/$x)
   t="$(($(date +%s%N)-t))"
@@ -42,3 +42,9 @@ do
     echo -e "${red}Problem $x failed ${endColour}"
   fi
 done
+
+#Visual Basic
+echo "Visual Basic Tests"
+vbnc visual\ basic/001.vb
+ls visual\ basic/
+mono visual\ basic/001.exe
