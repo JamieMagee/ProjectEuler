@@ -44,7 +44,7 @@ do
 done
 
 #Visual Basic
-echo "Visual Basic Tests"
-vbnc -nostdlib visual\ basic/001.vb
-ls visual\ basic/
-mono visual\ basic/001.exe
+#echo "Visual Basic Tests"
+#vbnc -nostdlib visual\ basic/001.vb
+#ls visual\ basic/
+#mono visual\ basic/001.exe
