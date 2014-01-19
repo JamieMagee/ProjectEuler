@@ -51,7 +51,7 @@ do
   output=$(python $x)
   t="$(($(date +%s%N)-t))"
   m="$((t/1000000))"
-  x=$(echo $x|cut -c 8- |rev| cut -c 3- |rev)
+  x=$(echo $x|cut -c 8- |rev| cut -c 4- |rev)
   answer=$(eval "sed -n '"$x"p' assets/answers.txt")
   if [ "$output" == "$answer" ]
   then 
