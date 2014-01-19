@@ -52,7 +52,7 @@ do
   t="$(($(date +%s%N)-t))"
   m="$((t/1000000))"
   x=$(echo $x|cut -c 8- |rev| cut -c 3- |rev)
-  answer="ans =  $(eval "sed -n '"$x"p' assets/answers.txt")"
+  answer=$(eval "sed -n '"$x"p' assets/answers.txt")
   if [ "$output" == "$answer" ]
   then 
     echo -e "${green}Problem $x solved in $m milliseconds ${endColour}"
