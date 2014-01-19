@@ -45,7 +45,7 @@ done
 
 #Python
 echo "Python Tests"
-for x in matlab/*.m
+for x in python/*.py
 do
   t="$(date +%s%N)"
   output=$(python $x)
