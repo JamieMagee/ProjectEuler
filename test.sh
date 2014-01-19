@@ -43,6 +43,24 @@ do
   fi
 done
 
+#Python
+echo "Python Tests"
+for x in matlab/*.m
+do
+  t="$(date +%s%N)"
+  output=$(python $x)
+  t="$(($(date +%s%N)-t))"
+  m="$((t/1000000))"
+  x=$(echo $x|cut -c 8- |rev| cut -c 3- |rev)
+  answer="ans =  $(eval "sed -n '"$x"p' assets/answers.txt")"
+  if [ "$output" == "$answer" ]
+  then 
+    echo -e "${green}Problem $x solved in $m milliseconds ${endColour}"
+  else 
+    echo -e "${red}Problem $x failed ${endColour}"
+  fi
+done
+
 #Visual Basic
 #echo "Visual Basic Tests"
 #vbnc -nostdlib visual\ basic/001.vb
