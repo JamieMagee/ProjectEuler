@@ -23,6 +23,7 @@ int monthdays(int m, int y)
     case 10: return 31;
     case 11: return 30;
     case 12: return 31;
+    default: return 0;
   }
 }
 

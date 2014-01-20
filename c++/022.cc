@@ -9,7 +9,7 @@ using namespace std;
 int namesum(string s)
 {
   int sum = 0;
-  for (int i = 0; i < s.size(); i++) sum += s[i] - '@';
+  for (unsigned int i = 0; i < s.size(); i++) sum += s[i] - '@';
   return sum;
 }
 
@@ -22,6 +22,6 @@ int main()
   
   while (getline(file, curr, ',')) names.push_back(curr.substr(1, curr.length()-2));
   sort(names.begin(), names.end());
-  for (int i = 0; i < names.size(); i++) ans += (i+1) * namesum(names[i]);
+  for (unsigned int i = 0; i < names.size(); i++) ans += (i+1) * namesum(names[i]);
   cout << ans << endl;
 }

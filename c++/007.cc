@@ -12,7 +12,7 @@ bool prime(int n)
   else if (n% 3 == 0) return false;
   else
   {
-    int r = floor(sqrt(n));
+    int r = (int)floor(sqrt(n));
     int f = 5;
     for (f; f <= r; f+=6)
     {
