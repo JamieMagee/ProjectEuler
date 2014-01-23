@@ -1,4 +1,4 @@
-names = eval('[' + open('../assets/022.txt').readlines()[0] + ']')
+names = eval('[' + open('assets/022.txt').readlines()[0] + ']')
 names.sort()
 ans = 0
 for i in range(len(names)):
