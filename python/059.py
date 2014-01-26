@@ -1,7 +1,7 @@
 def decrypt(key):
     plaintext = [''] * len(ciphertext)
     for i in range(len(ciphertext)):
-        plaintext[i] = unichr(ciphertext[i] ^ key[i % len(key)])
+        plaintext[i] = chr(ciphertext[i] ^ key[i % len(key)])
     return plaintext
 
 
@@ -25,4 +25,4 @@ for a in range(ord('a'), ord('z')):
             if getscore(decrypt([a, b, c])) > bestscore:
                 ans = decrypt([a, b, c])
                 bestscore = getscore(decrypt([a, b, c]))
-print(sum(ord(c) for c in ans))
+print((sum(ord(c) for c in ans)))

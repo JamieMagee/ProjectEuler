@@ -10,4 +10,4 @@ def partition(n):
 
 
 partitions = {}
-print(partition(100) - 1)
+print((partition(100) - 1))

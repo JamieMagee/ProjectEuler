@@ -15,4 +15,4 @@ while primes[i] <= 20:
     n *= math.pow(primes[i], a[i])
     i += 1
 
-print int(n)
+print(int(n))

@@ -3,10 +3,10 @@ from functools import reduce
 
 def primegen(n):
     sieve = [True] * n
-    for i in xrange(3, int(n**0.5)+1, 2):
+    for i in range(3, int(n**0.5)+1, 2):
         if sieve[i]:
             sieve[i*i::2*i] = [False]*((n-i*i-1)/(2*i)+1)
-    return [2] + [i for i in xrange(3, n, 2) if sieve[i]]
+    return [2] + [i for i in range(3, n, 2) if sieve[i]]
 
 def factorize(n):
     factors = []
@@ -48,4 +48,4 @@ def properdivisors(n):
 primes = primegen(25)
 abundant = set(number for number in range(12, 20162) if sum(properdivisors(number)) > number)
 sums = sorted(set(sum(c) for c in combinations_with_replacement(abundant, 2)))
-print(sum(number for number in range(1, 20162) if number not in sums))
+print((sum(number for number in range(1, 20162) if number not in sums)))

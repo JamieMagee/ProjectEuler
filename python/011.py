@@ -40,4 +40,4 @@ for y, row in enumerate(grid):
                     product *= grid[y_pos][x_pos]
                 if product > ans:
                     ans = product
-print ans
+print(ans)

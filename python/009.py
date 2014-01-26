@@ -20,4 +20,4 @@ for i in range(2, limit):
                 b = 2*d*i*n
                 c = d*(i*i+n*n)
             k += 2
-print(a*b*c)
+print((a*b*c))

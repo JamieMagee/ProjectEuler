@@ -7,4 +7,4 @@ for i in range(1, 2000):
         product = i * j
         if ispandigital(product, i, j):
             ans.add(product)
-print(sum(ans))
+print((sum(ans)))

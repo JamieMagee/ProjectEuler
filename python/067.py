@@ -1,5 +1,5 @@
 f = open('assets/067.txt')
-l = [map(int, line.split(' ')) for line in f]
+l = [list(map(int, line.split(' '))) for line in f]
 for i in range(1, len(l)):
     for j in range(0, i + 1):
         if j is 0:

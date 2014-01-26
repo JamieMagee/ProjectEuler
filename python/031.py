@@ -4,4 +4,4 @@ ways[0] = 1
 for i in range(0, 8):
     for j in range(coins[i], 201):
         ways[j] += ways[j - coins[i]]
-print(ways[200])
+print((ways[200]))
