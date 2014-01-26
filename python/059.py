@@ -18,7 +18,7 @@ def getscore(plaintext):
 
 
 bestscore = 0
-ciphertext = [int(c) for c in open('../assets/059.txt').readline().split(',')]
+ciphertext = [int(c) for c in open('assets/059.txt').readline().split(',')]
 for a in range(ord('a'), ord('z')):
     for b in range(ord('a'), ord('z')):
         for c in range(ord('a'), ord('z')):
