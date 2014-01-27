@@ -10,7 +10,7 @@ def sumchar(s):
 
 
 ans = 0
-words = eval('[' + open('../assets/042.txt').readlines()[0] + ']')
+words = eval('[' + open('assets/042.txt').readlines()[0] + ']')
 for word in words:
     if istri(sumchar(word)):
         ans += 1
