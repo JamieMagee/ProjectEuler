@@ -9,7 +9,7 @@ check = True
 while primes[i] <= 20:
     if check:
         if primes[i] <= math.sqrt(20):
-            a[i] = math.floor(math.log10(20)/math.log10(primes[i]))
+            a[i] = math.floor(math.log10(20) / math.log10(primes[i]))
         else:
             check = False
     n *= math.pow(primes[i], a[i])

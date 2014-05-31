@@ -11,6 +11,6 @@ for i in range(1, len(l)):
 
 ans = 0
 for i in range(0, len(l)):
-    if l[len(l)-1][i] > ans:
-        ans = l[len(l)-1][i]
+    if l[len(l) - 1][i] > ans:
+        ans = l[len(l) - 1][i]
 print(ans)

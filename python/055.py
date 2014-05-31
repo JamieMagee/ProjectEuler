@@ -1,6 +1,7 @@
 def ispalindrome(word):
     return word == word[::-1]
 
+
 ans = 0
 for i in range(10000):
     num, iterations = i, 0

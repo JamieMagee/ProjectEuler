@@ -2,11 +2,11 @@ from math import sqrt, floor
 
 
 def istri(n):
-    return floor(sqrt(8*n+1)) == sqrt(8*n+1)
+    return floor(sqrt(8 * n + 1)) == sqrt(8 * n + 1)
 
 
 def sumchar(s):
-    return sum(ord(c)-64 for c in s)
+    return sum(ord(c) - 64 for c in s)
 
 
 ans = 0

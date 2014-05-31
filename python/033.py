@@ -13,5 +13,6 @@ def iscurious(n, d):
         return True
     return False
 
+
 frac = product(list(range(10, 100)), list(range(10, 100)))
 print(reduce(lambda a, b: a * b, (Fraction(*f) for f in frac if iscurious(*f))).denominator)

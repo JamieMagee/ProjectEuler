@@ -2,7 +2,7 @@ num = '''73167176531330624919225119674426574742355349194934969835203127745063262
 ans = 0
 for i in range(len(num)):
     product = 1
-    subnum = num[i:i+5]
+    subnum = num[i:i + 5]
     for d in subnum:
         product *= int(d)
     if product > ans:

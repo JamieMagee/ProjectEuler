@@ -1,8 +1,8 @@
 def sod(n):
     sum, p = 1, 2
-    while p**2 <= n and n > 1:
+    while p ** 2 <= n and n > 1:
         if not n % p:
-            j = p**2
+            j = p ** 2
             n /= p
             while not n % p:
                 j *= p

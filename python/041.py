@@ -20,5 +20,6 @@ def isprime(n):
         f += 6
     return True
 
+
 pandigital = (int(''.join(str(d) for d in p)) for p in permutations(range(1, 8)))
 print(max(p for p in pandigital if isprime(p)))

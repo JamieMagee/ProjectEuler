@@ -6,4 +6,4 @@ for y in range(1901, 2001):
         if date(y, m, 1).weekday() == 6:
             ans += 1
 
-print (ans)
+print(ans)

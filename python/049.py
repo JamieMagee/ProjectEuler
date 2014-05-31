@@ -9,6 +9,7 @@ def primegen(n):
 def perm(x, y):
     return sorted(list(str(x))) == sorted(list(str(y)))
 
+
 primes = primegen(9999)
 a = 1489
 while True:

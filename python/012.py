@@ -1,9 +1,10 @@
 def primes(n):
     sieve = [True] * n
-    for i in range(3, int(n**0.5)+1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if sieve[i]:
-            sieve[i*i::2*i] = [False]*((n-i*i-1)/(2*i)+1)
+            sieve[i * i::2 * i] = [False] * ((n - i * i - 1) / (2 * i) + 1)
     return [2] + [i for i in range(3, n, 2) if sieve[i]]
+
 
 prime = primes(1000)
 factors = 0
@@ -17,7 +18,7 @@ while factors < 500:
         n1 /= 2
     divn1 = 1
     for i in range(0, len(prime)):
-        if prime[i]**2 > n1:
+        if prime[i] ** 2 > n1:
             divn1 *= 2
             break
         exp = 1
@@ -31,4 +32,4 @@ while factors < 500:
     factors = divn * divn1
     divn = divn1
 
-print((n*(n-1)/2))
+print((n * (n - 1) / 2))

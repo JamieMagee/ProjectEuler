@@ -4,5 +4,6 @@ def fib():
         yield a
         a, b = b, a + b
 
+
 ans = next(i for (i, f) in enumerate(fib()) if len(str(f)) >= 1000)
 print(ans)

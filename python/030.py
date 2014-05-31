@@ -8,6 +8,7 @@ def sumpowers(n):
 def fifthpower(n):
     return n == sumpowers(n)
 
+
 ans = 0
 for i in range(2, 200000):
     if fifthpower(i):
