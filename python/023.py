@@ -1,12 +1,14 @@
 from itertools import *
 from functools import reduce
 
+
 def primegen(n):
     sieve = [True] * n
-    for i in range(3, int(n**0.5)+1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if sieve[i]:
-            sieve[i*i::2*i] = [False]*((n-i*i-1)/(2*i)+1)
+            sieve[i * i::2 * i] = [False] * ((n - i * i - 1) / (2 * i) + 1)
     return [2] + [i for i in range(3, n, 2) if sieve[i]]
+
 
 def factorize(n):
     factors = []
@@ -30,7 +32,7 @@ def divisors(n):
     nfactors = len(factors)
     f = [0] * nfactors
     while True:
-        yield reduce(lambda x, y: x*y, [factors[x][0]**f[x] for x in range(nfactors)], 1)
+        yield reduce(lambda x, y: x * y, [factors[x][0] ** f[x] for x in range(nfactors)], 1)
         i = 0
         while True:
             f[i] += 1
@@ -44,6 +46,7 @@ def divisors(n):
 
 def properdivisors(n):
     return list(divisors(n))[:-1]
+
 
 primes = primegen(25)
 abundant = set(number for number in range(12, 20162) if sum(properdivisors(number)) > number)

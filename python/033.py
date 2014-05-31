@@ -1,5 +1,6 @@
 from itertools import product
 from fractions import Fraction
+from functools import reduce
 
 
 def iscurious(n, d):

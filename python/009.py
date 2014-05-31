@@ -1,7 +1,9 @@
 import math
 
+
 def gcd(a, b):
     return gcd(b, a % b) if b else a
+
 
 s = 1000 / 2
 limit = int(math.ceil(math.sqrt(s)) - 1)
@@ -16,8 +18,8 @@ for i in range(2, limit):
             if si % k is 0 and gcd(k, i) is 1:
                 d = s / (k * i)
                 n = k - i
-                a = d*(i*i-n*n)
-                b = 2*d*i*n
-                c = d*(i*i+n*n)
+                a = d * (i * i - n * n)
+                b = 2 * d * i * n
+                c = d * (i * i + n * n)
             k += 2
-print((a*b*c))
+print((a * b * c))
