@@ -12,13 +12,13 @@ def getscore(plaintext):
             sum += 1
         elif 'a' <= plaintext[i] <= 'z':
             sum += 2
-        elif plaintext[i] < 0x20 or plaintext[i] == 0x7F:
+        elif plaintext[i] < chr(0x20) or plaintext[i] == chr(0x7F):
             sum -= 10
     return sum
 
 
 bestscore = 0
-ciphertext = [int(c) for c in open('assets/059.txt').readline().split(',')]
+ciphertext = [int(c) for c in open('../assets/059.txt').readline().split(',')]
 for a in range(ord('a'), ord('z')):
     for b in range(ord('a'), ord('z')):
         for c in range(ord('a'), ord('z')):

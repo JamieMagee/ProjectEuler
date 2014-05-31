@@ -6,7 +6,7 @@ for i in range(1, 10000):
     while sum(len(s) for s in num) < 9:
         num.append(str(i * j))
         j += 1
-    if sum(len(s) for s in num) == 9 and set(sum(([list(s) for s in num]), [])) == pand and ''.join(num) > largest:
-        largest = ''.join(num)
+    if sum(len(s) for s in num) == 9 and set(sum(([list(s) for s in num]), [])) == pand and int(''.join(num)) > largest:
+        largest = int(''.join(num))
 
 print(largest)

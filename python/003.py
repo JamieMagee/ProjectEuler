@@ -20,4 +20,4 @@ def factorise(n):
     return factors
 
 
-print(max(factorise(600851475143)))
+print(int(max(factorise(600851475143))))

@@ -5,7 +5,7 @@ from operator import *
 def pentgen(n):
     pent = set()
     for i in range(1, n):
-        pent.add(i * (3 * i - 1) / 2)
+        pent.add(i * (3 * i - 1) // 2)
     return pent
 
 

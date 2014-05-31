@@ -2,12 +2,12 @@ def circular_prime(x):
     k = x
     d = 0
     while x:
-        x /= 10
+        x //= 10
         d += 1
     for i in range(0, d):
         if not p[k]:
             return 0
-        k = (k % 10) * p10[d - 1] + k / 10
+        k = (k % 10) * p10[d - 1] + k // 10
     return p[k]
 
 

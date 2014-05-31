@@ -5,9 +5,9 @@ s = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
 for i in range(1, 1000):
     if not i in list(s.keys()):
         if i < 100:
-            s[i] = s[i / 10 * 10] + s[i % 10]
+            s[i] = s[i // 10 * 10] + s[i % 10]
         else:
-            s[i] = s[i / 100] + "hundred"
+            s[i] = s[i // 100] + "hundred"
             if i % 100:
                 s[i] += "and" + s[i % 100]
 s[1000] = "onethousand"
