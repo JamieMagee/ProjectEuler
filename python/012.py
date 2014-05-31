@@ -15,7 +15,7 @@ while factors < 500:
     n += 1
     n1 = n
     if n1 % 2 == 0:
-        n1 /= 2
+        n1 //= 2
     divn1 = 1
     for i in range(0, len(prime)):
         if prime[i] ** 2 > n1:
@@ -24,7 +24,7 @@ while factors < 500:
         exp = 1
         while n1 % prime[i] == 0:
             exp += 1
-            n1 /= prime[i]
+            n1 //= prime[i]
         if exp:
             divn1 *= exp
         if n1 is 1:
@@ -32,4 +32,4 @@ while factors < 500:
     factors = divn * divn1
     divn = divn1
 
-print((n * (n - 1)) // 2)
+print(n * (n - 1) // 2)

@@ -4,7 +4,7 @@ from math import factorial
 def sumfac(n):
     r = 0
     while n:
-        r, n = r + factorial(n % 10), n / 10
+        r, n = r + factorial(n % 10), n // 10
     return r
 
 
