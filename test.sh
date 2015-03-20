@@ -11,7 +11,7 @@ echo "C++ Tests"
 for x in c++/*.cc
 do 
   x=$(echo $x|cut -c 5- |rev| cut -c 4- |rev)
-  g++ c++/$x.cc -o c++/$x -std=c++0x -O3 > /dev/null
+  clang++ c++/$x.cc -o c++/$x -Wall -Wextra -Werror -pedantic -std=c++1y -O3 > /dev/null
   t="$(date +%s%N)"
   output=$(./c++/$x)
   t="$(($(date +%s%N)-t))"
