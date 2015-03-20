@@ -14,7 +14,7 @@ bool prime(int n)
   {
     int r = (int)floor(sqrt(n));
     int f = 5;
-    for (f; f <= r; f+=6)
+    for (f=f; f <= r; f+=6)
     {
       if (n % f == 0) return false;
       if (n % (f + 2) == 0) return false;

@@ -22,7 +22,7 @@ vector<int> sieve(int x)
     }
   }
 
-  for (int i = 2; i < sieve.size(); i++)
+  for (unsigned long i = 2; i < sieve.size(); i++)
   {
     if (sieve[i]) primes.push_back(i);
   }
@@ -40,7 +40,7 @@ int main()
     n1 = n;
     if (!(n1%2)) n1 /= 2;
     divn1 = 1;
-    for (int i = 0; i < primes.size() ; i++)
+    for (unsigned long i = 0; i < primes.size() ; i++)
     {
       if (primes[i] * primes[i] > n1)
       {

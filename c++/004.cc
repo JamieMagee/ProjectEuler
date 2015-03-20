@@ -27,7 +27,7 @@ int main()
       j = 990;
       k = 11;
     }
-    for (j; j >= i; j-=k)
+    for (j=j; j >= i; j-=k)
     {
       if (i*j <= largest) break;
       if (palindrome(i*j)) largest = i*j;
