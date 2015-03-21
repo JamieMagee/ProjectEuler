@@ -17,17 +17,9 @@ int main()
   
   for (int i = 999; i >= 100; i--)
   {
-    if (i%11==0) 
-    {
-      j = 999;
-      k = 1;
-    }
-    else
-    {
-      j = 990;
-      k = 11;
-    }
-    for (j=j; j >= i; j-=k)
+    j = i % 11 ? 990 : 999;
+    k = i % 11 ? 11 : 1;
+    for ( ; j >= i; j-=k)
     {
       if (i*j <= largest) break;
       if (palindrome(i*j)) largest = i*j;
